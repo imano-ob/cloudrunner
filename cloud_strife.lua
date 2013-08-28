@@ -48,5 +48,20 @@ end
 
 function CloudStrife:draw()
 	-- sprite depende de posicao e vida
-	love.graphics.draw(self.image, self.posx, self.posy, 0, 0.5 * self.life / 100, 0.5 * self.life / 100)
+  local scale = self:scale()
+	love.graphics.draw(self.image, self.posx, self.posy, 0, scale, scale)
+end
+
+function CloudStrife:scale()
+  --Tamanho depende da vida atual
+        return 0.5 * self.life / 100
+end
+
+function CloudStrife:size()
+  --Tamanho depende a vida atual
+  local scale = self:scale()
+  --Numeros magicos abaixo sao o tamanho original da nuvem
+  local width = scale * 457
+  local height = scale * 249
+  return width, height
 end
