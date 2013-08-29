@@ -24,18 +24,5 @@ function Cloudinho:update(dt)
 end
 
 function Cloudinho:draw()
-  local scale = self:scale()
-	love.graphics.draw(self.image, self.posx, self.posy, 0, scale, scale)
-      end
-
-function Cloudinho:scale()
-  return 0.1
-end
-
-function Cloudinho:size()
-  local scale = self:scale()
-  --Numeros magicos sao o tamanho da imagem original
-  local width = scale * 457
-  local height = scale * 457
-  return width, height
+	love.graphics.draw(self.image, self.posx, self.posy, 0, 0.1, 0.1)
 end

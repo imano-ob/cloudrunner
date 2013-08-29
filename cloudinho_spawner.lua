@@ -2,8 +2,6 @@
 
 require 'class'
 require 'cloudinho'
-require 'collision'
-require 'cloud_strife'
 
 CloudinhoSpawner = class()
 
@@ -12,7 +10,7 @@ function CloudinhoSpawner:init()
 	self.time1 = love.timer.getTime()
 end
 
-function CloudinhoSpawner:update(dt, strife)
+function CloudinhoSpawner:update(dt)
 	-- movimentacao de cloudinho
 	self.time2 = love.timer.getTime()
 	if (self.time2 - self.time1 > 3) then
@@ -23,13 +21,7 @@ function CloudinhoSpawner:update(dt, strife)
 	end
 	for i, cloudinho in pairs(self.cloudinhos) do
 		cloudinho:update(dt)
-		if isColliding(cloudinho, strife) then
-		  strife:raiseLife(20)
-		  self.cloudinhos[i] = nil
-		  --table.remove(self.cloudinhos, )
-		end
-	      end
-	      
+	end
 end
 
 function CloudinhoSpawner:draw()
