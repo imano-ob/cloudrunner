@@ -3,7 +3,9 @@ require "cloud_strife"
 require "cloudinho"
 
 function isColliding(stuff1, stuff2)
+  --Sanity check
   if not stuff1 or not stuff2 then
+  --Prints de debug
     if not stuff1 then
       print ("fark")
     end
@@ -14,6 +16,7 @@ function isColliding(stuff1, stuff2)
   end
   local width1, height1 = stuff1:size()
   local width2, height2 = stuff2:size()
+  --Colisoes de retangulo
   if stuff1.posx + width1 >= stuff2.posx and
      stuff1.posy + height1 >= stuff2.posy and
      stuff1.posx <= stuff2.posx + width2 and
