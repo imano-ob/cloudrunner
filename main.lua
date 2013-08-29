@@ -15,7 +15,7 @@ end
 	
 function love.update(dt)
 	strife:update(dt)
-	cloudinho_spawner:update(dt)
+	cloudinho_spawner:update(dt, strife)
 	bgx = bgx + 50 * dt
 	
 	time2 = love.timer.getTime()
@@ -23,6 +23,7 @@ function love.update(dt)
 		strife:raiseLife(20)
 		time1 = time2
 	end
+	
 end
 
 function love.draw()
