@@ -20,7 +20,7 @@ function love.update(dt)
 	
 	time2 = love.timer.getTime()
 	if (time2 - time1 > 5) then
-		strife:raiseLife(20)
+	--	strife:raiseLife(20)
 		time1 = time2
 	end
 	
