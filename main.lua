@@ -22,7 +22,7 @@ end
 	
 function love.update(dt)
 	strife:update(dt)
-	cloudinho_spawner:update(dt)
+	cloudinho_spawner:update(dt, strife)
 	aviao_spawner:update(dt)
 	balao_spawner:update(dt)
 	meteoro_spawner:update(dt)
