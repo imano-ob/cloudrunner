@@ -15,15 +15,14 @@ end
 	
 function love.update(dt)
 	strife:update(dt)
-	cloudinho_spawner:update(dt, strife)
+	cloudinho_spawner:update(dt)
 	bgx = bgx + 50 * dt
 	
 	time2 = love.timer.getTime()
 	if (time2 - time1 > 5) then
-	--	strife:raiseLife(20)
+		strife:raiseLife(20)
 		time1 = time2
 	end
-	
 end
 
 function love.draw()
